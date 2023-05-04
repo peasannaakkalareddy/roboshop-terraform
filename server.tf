@@ -71,7 +71,7 @@ variable "components" {
 
   }
 }
-
+#1
 
     resource "aws_route_53_" "frontend" {
       for_each = var.components
