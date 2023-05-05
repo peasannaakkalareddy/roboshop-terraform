@@ -20,7 +20,6 @@ resource "aws_instance" "frontend" {
     Name = "frontend"
   }
 }
-
 resource "aws_route53_record" "frontend" {
   zone_id = "Z0299491JAQ87HTY8OKC"
   name    = "frontend-dev.cskvsmi.online"
@@ -28,7 +27,6 @@ resource "aws_route53_record" "frontend" {
   ttl     = 30
   records = [aws_instance.frontend.private_ip]
 }
-
 resource "aws_instance" "mongodb" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
@@ -38,7 +36,6 @@ resource "aws_instance" "mongodb" {
     Name = "mongodb"
   }
 }
-
 resource "aws_route53_record" "mongodb" {
   zone_id = "Z0299491JAQ87HTY8OKC"
   name    = "mongodb-dev.cskvsmi.online"
@@ -46,7 +43,6 @@ resource "aws_route53_record" "mongodb" {
   ttl     = 30
   records = [aws_instance.mongodb.private_ip]
 }
-
 resource "aws_instance" "catalogue" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
@@ -56,7 +52,6 @@ resource "aws_instance" "catalogue" {
     Name = "catalogue"
   }
 }
-
 resource "aws_route53_record" "catalogue" {
   zone_id = "Z0299491JAQ87HTY8OKC"
   name    = "catalogue-dev.cskvsmi.online"
@@ -64,7 +59,6 @@ resource "aws_route53_record" "catalogue" {
   ttl     = 30
   records = [aws_instance.catalogue.private_ip]
 }
-
 resource "aws_instance" "user" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
@@ -74,7 +68,6 @@ resource "aws_instance" "user" {
     Name = "user"
   }
 }
-
 resource "aws_route53_record" "user" {
   zone_id = "Z0299491JAQ87HTY8OKC"
   name    = "user-dev.cskvsmi.online"
@@ -82,8 +75,6 @@ resource "aws_route53_record" "user" {
   ttl     = 30
   records = [aws_instance.user.private_ip]
 }
-
-
 resource "aws_instance" "redis" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
@@ -93,7 +84,6 @@ resource "aws_instance" "redis" {
     Name = "redis"
   }
 }
-
 resource "aws_route53_record" "redis" {
   zone_id = "Z0299491JAQ87HTY8OKC"
   name    = "redis-dev.cskvsmi.online"
@@ -110,7 +100,6 @@ resource "aws_instance" "cart" {
     Name = "cart"
   }
 }
-
 resource "aws_route53_record" "cart" {
   zone_id = "Z0299491JAQ87HTY8OKC"
   name    = "cart-dev.cskvsmi.online"
@@ -127,7 +116,6 @@ resource "aws_instance" "mysql" {
     Name = "mysql"
   }
 }
-
 resource "aws_route53_record" "mysql" {
   zone_id = "Z0299491JAQ87HTY8OKC"
   name    = "mysql-dev.cskvsmi.online"
@@ -135,7 +123,6 @@ resource "aws_route53_record" "mysql" {
   ttl     = 30
   records = [aws_instance.mysql.private_ip]
 }
-
 resource "aws_instance" "shipping" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
@@ -145,7 +132,6 @@ resource "aws_instance" "shipping" {
     Name = "shipping"
   }
 }
-
 resource "aws_route53_record" "shipping" {
   zone_id = "Z0299491JAQ87HTY8OKC"
   name    = "shipping-dev.cskvsmi.online"
@@ -162,7 +148,6 @@ resource "aws_instance" "rabbitmq" {
     Name = "rabbitmq"
   }
 }
-
 resource "aws_route53_record" "rabbitmq" {
   zone_id = "Z0299491JAQ87HTY8OKC"
   name    = "rabbitmq-dev.cskvsmi.online"
@@ -170,7 +155,6 @@ resource "aws_route53_record" "rabbitmq" {
   ttl     = 30
   records = [aws_instance.rabbitmq.private_ip]
 }
-
 resource "aws_instance" "payment" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
@@ -180,7 +164,6 @@ resource "aws_instance" "payment" {
     Name = "payment"
   }
 }
-
 resource "aws_route53_record" "payment" {
   zone_id = "Z0299491JAQ87HTY8OKC"
   name    = "payment-dev.cskvsmi.online"
