@@ -67,15 +67,18 @@ resource "aws_instance" "instance" {
   }
 }
 
-/*
 
-resource "aws_route53_record" "frontend" {
+
+resource "aws_route53_record" "record" {
+  for_each = var.component
   zone_id = "Z0299491JAQ87HTY8OKC"
-  name    = "frontend-dev.cskvsmi.online"
+  name    = "${each.value["name"]}-dev.cskvsmi.online"
   type    = "A"
   ttl     = 30
-  records = [ aws_instance.frontend.private_ip ]
+  records = [ aws_instance.instance[each.value["name"]].private_ip ]
 }
+
+/*
 resource "aws_instance" "mongodb" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
