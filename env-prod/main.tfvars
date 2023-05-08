@@ -1,6 +1,5 @@
-component =  {
+component=  {
 
-  default = {
     frontend = {
       name          = "frontend"
       instance_type = "t3.micro"
@@ -44,6 +43,6 @@ component =  {
 
   }
 
-}
+
 
 env="prod"
