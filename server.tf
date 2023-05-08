@@ -77,7 +77,7 @@ resource "aws_route53_record" "record" {
   ttl     = 30
   records = [ aws_instance.instance[each.value["name"]].private_ip ]
 }
-variable "env" {}
+
 /*
 resource "aws_instance" "mongodb" {
   ami           = data.aws_ami.centos.image_id
