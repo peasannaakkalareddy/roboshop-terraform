@@ -8,7 +8,6 @@ data "aws_security_group" "allow_all" {
   name = "allow_all"
 }
 
-
 variable "component" {
 
 default = {
