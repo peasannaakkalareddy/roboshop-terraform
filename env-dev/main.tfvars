@@ -10,7 +10,7 @@ component =  {
     }
     catalogue = {
       name          = "catalogue"
-      instance_type = "t3.micro"
+      instance_type = "t3.small"
     }
     redis = {
       name          = "redis"
