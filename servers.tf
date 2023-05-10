@@ -1,6 +1,5 @@
 module "servers" {
   for_each = var.component
-
   source = "./module"
   component_name = each.value["name"]
   env = var.env
