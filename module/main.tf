@@ -24,12 +24,10 @@ resource "null_resource" "provisioner" {
       "rm -rf roboshop-shell",
       "git clone https://github.com/peasannaakkalareddy/roboshop-shell.git",
       "cd roboshop-shell",
-      "sudo bash ${var.component_name}.sh" ${var.password}
+      "sudo bash ${var.component_name}.sh ${var.password}"
     ]
   }
 }
-
-
 
 
 resource "aws_route53_record" "record" {
