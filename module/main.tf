@@ -3,7 +3,9 @@ resource "aws_instance" "instance" {
   instance_type          = var.instance_type
   vpc_security_group_ids = [data.aws_security_group.allow_all.id]
 
-  tags = var.app_type == "app" ? local.app_tags : local.db_tags
+  tags = {
+    Name = local.name
+  }
 }
 
 resource "null_resource" "provisioner" {
