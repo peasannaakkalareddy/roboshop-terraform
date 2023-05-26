@@ -45,7 +45,7 @@ database_servers = {
   mysql = {
     name          = "mysql"
     instance_type = "t3.small"
-    password = "Roboshop@1"
+    password = "RoboShop@1"
   }
   rabbitmq = {
     name          = "rabbitmq"
