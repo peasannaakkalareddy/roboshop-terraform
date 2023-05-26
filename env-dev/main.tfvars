@@ -22,7 +22,7 @@ app_servers =  {
     shipping = {
       name          = "shipping"
       instance_type = "t3.micro"
-      password = "Roboshop@1"
+      password = "RoboShop@1"
     }
 
     payment = {
