@@ -25,7 +25,7 @@ resource "null_resource" "provisioner" {
 
 
 resource "aws_route53_record" "record" {
-  zone_id = "Z0299491JAQ87HTY8OKC"
+  zone_id = "Z00980362VAU77H2W2WFH"
   name    = "${var.component_name}-dev.cskvsmi.online"
   type    = "A"
   ttl     = 30
