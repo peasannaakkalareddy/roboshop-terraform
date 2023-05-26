@@ -7,7 +7,7 @@ resource "aws_instance" "instance" {
 }
 
 resource "null_resource" "provisioner" {
-  depends_on = [aws_instance.instance, aws_route53_record.record ]
+  depends_on = [aws_instance.instance, aws_route53_record.records]
   provisioner "remote-exec" {
 
     connection {
@@ -22,7 +22,7 @@ resource "null_resource" "provisioner" {
 }
 
 
-resource "aws_route53_record" "record" {
+resource "aws_route53_record" "records" {
   zone_id = "Z0299491JAQ87HTY8OKC"
   name    = "${var.component_name}-dev.cskvsmi.online"
   type    = "A"
