@@ -10,6 +10,9 @@ resource "aws_instance" "instance" {
 
 resource "null_resource" "provisioner" {
   depends_on = [aws_instance.instance, aws_route53_record.record ]
+  triggers = {
+    private_key = aws_instance.instance.private_ip
+  }
   provisioner "remote-exec" {
 
     connection {
