@@ -28,7 +28,7 @@ resource "null_resource" "provisioner" {
 
 
 resource "aws_route53_record" "record" {
-  zone_id = "Z00980362VAU77H2W2WFH"
+  zone_id = "Z0299491JAQ87HTY8OKC"
   name    = "${var.component_name}-dev.cskvsmi.online"
   type    = "A"
   ttl     = 30
@@ -79,15 +79,9 @@ resource "aws_iam_role_policy" "ssm-ps-policy" {
           "ssm:GetParameter"
         ],
         "Resource": [
-          "arn:aws:ssm:us-east-1:193400300103:parameter/${var.env}.${var.component_name}.*",
-          "arn:aws:kms:us-east-1:193400300103:key/4577942f-9fbc-4247-84f6-e31cdf26ac63"
+          "arn:aws:kms:us-east-1:267541270205:key/2fbc8dc0-a074-4e66-8952-b5bbc1140732",
+          "arn:aws:ssm:us-east-1:267541270205:parameter/${var.env}.${var.component_name}.*"
         ]
-      },
-      {
-        "Sid": "VisualEditor1",
-        "Effect": "Allow",
-        "Action": "ssm:DescribeParameters",
-        "Resource": "*"
       }
     ]
   })
