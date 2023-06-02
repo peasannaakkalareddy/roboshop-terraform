@@ -17,5 +17,6 @@ db_tags = {
   }
 app_tags = {
   Name = "${var.component_name}-${var.env}"
+  Moniter = "true"
 }
 }

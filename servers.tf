@@ -9,6 +9,7 @@ module "database-servers" {
   app_type = "db"
 }
 
+
 module "app-servers" {
 
   depends_on = [module.database-servers]
