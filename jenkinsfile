@@ -1,0 +1,35 @@
+pipline{
+
+  agent {
+    node{
+      label 'workstation'
+    }
+  }
+
+  parameters {
+    choice(name: 'env', choices: ['dev', 'prod'], description: 'Pick environment')
+  }
+
+  stages {
+
+    stage('terraform INIT') {
+      steps{
+        sh 'terraform init-backend-config=${env}/state.tfvars'
+      }
+    }
+
+    stage('terraform Apply') {
+      steps{
+        sh 'terraform Apply -auto-approve -var-file=env=${env}/main.tfvars'
+      }
+    }
+
+  }
+
+ post {
+   always {
+     cleanWs()
+   }
+ }
+
+}
