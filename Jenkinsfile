@@ -20,7 +20,7 @@ pipline{
 
     stage('terraform Apply') {
       steps{
-        sh 'terraform Apply -auto-approve -var-file=env=${env}/main.tfvars'
+        sh 'terraform apply -auto-approve -var-file=env=${env}/main.tfvars'
       }
     }
 
