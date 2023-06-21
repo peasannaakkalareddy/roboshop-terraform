@@ -14,7 +14,7 @@ pipline{
 
     stage('terraform INIT') {
       steps{
-        sh 'terraform init-backend-config=${env}/state.tfvars'
+        sh 'terraform init backend-config=env-${env}/state.tfvars'
       }
     }
 
