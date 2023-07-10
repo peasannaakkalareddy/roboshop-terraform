@@ -25,15 +25,3 @@ module "app" {
   vpc_id         = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
   allow_app_cidr = lookup(lookup(lookup(lookup(module.vpc, "main", null), "subnets", null), each.value["allow_app_cidr"], null), "subnet_cidrs", null)
 }
-
-variable "instance_type" {}
-variable "subnet_ids" {}
-variable "name" {}
-variable "env" {}
-variable "vpc_id" {}
-variable "allow_app_cidr" {}
-variable "bastion_cidr" {}
-variable "desired_capacity" {}
-variable "max_size" {}
-variable "min_size" {}
-variable "tags" {}
