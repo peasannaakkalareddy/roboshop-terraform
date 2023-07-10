@@ -1,6 +1,13 @@
 output "vpc" {
   value = lookup(lookup(module.vpc, "main", null), "subnets", null)
 }
-#  subnet_id     = element(lookup(lookup(lookup(lookup(module.vpc, "main", null), "subnets", null), each.value["subnet_name"], null), "subnet_ids", null), 0)
-#}
-//element(lookup(lookup(module.vpc, each.value["subnet_name"], null), "subnet_ids", null), 0)
+
+#vpc = {
+#  main = {
+#    cidr_block = "10.0.0.0/16"
+#    subnets = {
+#      public = {
+#        name       = "public"
+#        cidr_block = ["10.0.0.0/24", "10.0.1.0/24"]
+#        azs        = ["us-east-1a", "us-east-1b"]
+#      }
