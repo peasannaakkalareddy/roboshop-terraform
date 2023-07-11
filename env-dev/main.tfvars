@@ -54,42 +54,42 @@ app = {
     max_size         = 10
     min_size         = 2
   }
-#    cart = {
-#      name          = "cart"
-#      instance_type = "t3.small"
-#      subnet_name   = "app"
-#      allow_app_cidr   = "web"
-#      desired_capacity = 2
-#      max_size         = 10
-#      min_size         = 2
-#    }
-#    user = {
-#      name          = "user"
-#      instance_type = "t3.small"
-#      subnet_name   = "app"
-#      allow_app_cidr   = "web"
-#      desired_capacity = 2
-#      max_size         = 10
-#      min_size         = 2
-#    }
-#    shipping = {
-#      name          = "shipping"
-#      instance_type = "t3.small"
-#      subnet_name   = "app"
-#      allow_app_cidr   = "web"
-#      desired_capacity = 2
-#      max_size         = 10
-#      min_size         = 2
-#    }
-#    payment = {
-#      name          = "payment"
-#      instance_type = "t3.small"
-#      subnet_name   = "app"
-#      allow_app_cidr   = "web"
-#      desired_capacity = 2
-#      max_size         = 10
-#      min_size         = 2
-#    }
+    cart = {
+      name          = "cart"
+      instance_type = "t3.small"
+      subnet_name   = "app"
+      allow_app_cidr   = "web"
+      desired_capacity = 2
+      max_size         = 10
+      min_size         = 2
+    }
+    user = {
+      name          = "user"
+      instance_type = "t3.small"
+      subnet_name   = "app"
+      allow_app_cidr   = "web"
+      desired_capacity = 2
+      max_size         = 10
+      min_size         = 2
+    }
+    shipping = {
+      name          = "shipping"
+      instance_type = "t3.small"
+      subnet_name   = "app"
+      allow_app_cidr   = "web"
+      desired_capacity = 2
+      max_size         = 10
+      min_size         = 2
+    }
+    payment = {
+      name          = "payment"
+      instance_type = "t3.small"
+      subnet_name   = "app"
+      allow_app_cidr   = "web"
+      desired_capacity = 2
+      max_size         = 10
+      min_size         = 2
+    }
 }
 
 docdb = {
@@ -128,5 +128,20 @@ rabbitmq = {
     subnet_name   = "db"
     allow_db_cidr = "app"
     instance_type = "t3.small"
+  }
+}
+
+alb = {
+  public = {
+    name           = "public"
+    subnet_name    = "public"
+    allow_alb_cidr = null
+    internal       = false
+  }
+  private = {
+    name           = "private"
+    subnet_name    = "app"
+    allow_alb_cidr = "web"
+    internal       = true
   }
 }
