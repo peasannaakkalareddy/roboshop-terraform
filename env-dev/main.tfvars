@@ -3,6 +3,9 @@ bastion_cidr = ["172.31.92.147/32"]
 default_vpc_id = "vpc-0909e1955c20c4234"
 default_vpc_cidr = "172.31.0.0/16"
 default_vpc_rtid = "rtb-0a6bd9fd68d21b762"
+domain_name      = "cskvsmi.online"
+domain_id        = "Z00449452CLOQK09IBZHP"
+
 kms_arn = "arn:aws:kms:us-east-1:697630586505:key/9eac9193-6406-4e7b-8580-faac987c8d62"
 vpc = {
   main = {
