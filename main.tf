@@ -21,6 +21,7 @@ module "app" {
   desired_capacity = each.value["desired_capacity"]
   max_size         = each.value["max_size"]
   min_size         = each.value["min_size"]
+  app_port         = each.value["app_port"]
   tags       = local.tags
 
   env          = var.env
