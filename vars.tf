@@ -8,3 +8,4 @@ variable "default_vpc_rtid" {}
 variable "kms_arn" {}
 
 variable "docdb" {}
+variable "rds" {}
