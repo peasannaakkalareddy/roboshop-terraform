@@ -37,18 +37,17 @@ vpc = {
 
 app = {
   frontend = {
-    name             = "frontend"
-    instance_type    = "t3.small"
-    subnet_name      = "web"
-    allow_app_cidr   = "public"
-    desired_capacity = 1
-    max_size         = 10
-    min_size         = 1
-    app_port         = 80
+    name              = "frontend"
+    instance_type     = "t3.small"
+    subnet_name       = "web"
+    allow_app_cidr    = "public"
+    desired_capacity  = 1
+    max_size          = 10
+    min_size          = 1
+    app_port          = 80
     listener_priority = 1
-    lb_type         = "public"
-    dns_name        = "dev"
-
+    lb_type           = "public"
+    dns_name          = "dev"
   }
   catalogue = {
     name             = "catalogue"
