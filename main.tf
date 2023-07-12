@@ -36,6 +36,8 @@ module "app" {
   tags         = local.tags
   domain_name  = var.domain_name
   domain_id    = var.domain_id
+  kms_arn      = var.kms_arn
+
 }
 module "docdb" {
   source = "git::https://github.com/peasannaakkalareddy/tf-module-docdb.git"
