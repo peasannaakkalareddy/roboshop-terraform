@@ -34,7 +34,7 @@ module "app" {
   allow_app_cidr = lookup(lookup(lookup(lookup(module.vpc, "main", null), "subnets", null), each.value["allow_app_cidr"], null), "subnet_cidrs", null)
   listener_arn   = lookup(lookup(module.alb, each.value["lb_type"], null), "listener_arn", null)
   lb_dns_name    = lookup(lookup(module.alb, each.value["lb_type"], null), "dns_name", null)
-  dns_name          = each.value["name"] == "frontend" ? each.value["dns_name"] : "${each.value["name"]}-${var.env}"
+  dns_name          = lookup(var.app, each.value["dns_name"], "${each.value["name"]}-${var.env}")
 }
 module "docdb" {
   source = "git::https://github.com/peasannaakkalareddy/tf-module-docdb.git"
