@@ -25,6 +25,7 @@ module "app" {
   listener_priority = each.value["listener_priority"]
   tags             = local.tags
   domain_name      = var.domain_name
+  domain_id        =var.domain_id
 
   env          = var.env
   bastion_cidr = var.bastion_cidr
