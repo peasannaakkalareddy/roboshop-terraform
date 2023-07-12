@@ -7,6 +7,7 @@ variable "default_vpc_cidr" {}
 variable "default_vpc_rtid" {}
 variable "kms_arn" {}
 variable "domain_id" {}
+variable "domain_name" {}
 
 variable "docdb" {}
 variable "rds" {}
