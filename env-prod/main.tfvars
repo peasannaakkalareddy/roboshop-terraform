@@ -10,26 +10,26 @@ domain_id        = "Z00449452CLOQK09IBZHP"
 kms_arn = "arn:aws:kms:us-east-1:697630586505:key/9eac9193-6406-4e7b-8580-faac987c8d62"
 vpc = {
   main = {
-    cidr_block = "10.0.0.0/16"
+    cidr_block = "10.100.0.0/16"
     subnets = {
       public = {
         name       = "public"
-        cidr_block = ["10.0.0.0/24", "10.0.1.0/24"]
+        cidr_block = ["10.100.0.0/24", "10.100.1.0/24"]
         azs        = ["us-east-1a", "us-east-1b"]
       }
       web = {
         name       = "web"
-        cidr_block = ["10.0.2.0/24", "10.0.3.0/24"]
+        cidr_block = ["10.100.2.0/24", "10.100.3.0/24"]
         azs        = ["us-east-1a", "us-east-1b"]
       }
       app = {
         name       = "app"
-        cidr_block = ["10.0.4.0/24", "10.0.5.0/24"]
+        cidr_block = ["10.100.4.0/24", "10.100.5.0/24"]
         azs        = ["us-east-1a", "us-east-1b"]
       }
       db = {
         name       = "db"
-        cidr_block = ["10.0.6.0/24", "10.0.7.0/24"]
+        cidr_block = ["10.100.6.0/24", "10.100.7.0/24"]
         azs        = ["us-east-1a", "us-east-1b"]
       }
     }
@@ -48,7 +48,7 @@ app = {
     app_port          = 80
     listener_priority = 1
     lb_type           = "public"
-    dns_name          = "dev"
+    dns_name          = "www"
     parameters        = []
   }
   catalogue = {
