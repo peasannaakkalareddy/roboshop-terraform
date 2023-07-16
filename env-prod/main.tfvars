@@ -1,13 +1,13 @@
 env = "prod"
-bastion_cidr = ["172.31.92.147/32"]
-monitor_cidr     = ["172.31.12.74/32"]
-default_vpc_id = "vpc-0909e1955c20c4234"
+bastion_cidr = ["172.31.86.195/32"]
+monitor_cidr     = ["172.31.94.42/32"]
+default_vpc_id = "vpc-0031a3556931f8c23"
 default_vpc_cidr = "172.31.0.0/16"
-default_vpc_rtid = "rtb-0a6bd9fd68d21b762"
-domain_name      = "cskvsmi.online"
-domain_id        = "Z00449452CLOQK09IBZHP"
+default_vpc_rtid = "rtb-0b759e2fd83da83c7"
+domain_name      = "panda4u.online"
+domain_id        = "Z07261131TWTABGF77UVC"
 
-kms_arn = "arn:aws:kms:us-east-1:697630586505:key/9eac9193-6406-4e7b-8580-faac987c8d62"
+kms_arn = "arn:aws:kms:us-east-1:193400300103:key/4577942f-9fbc-4247-84f6-e31cdf26ac63"
 vpc = {
   main = {
     cidr_block = "10.100.0.0/16"
