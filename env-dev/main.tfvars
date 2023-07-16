@@ -7,7 +7,7 @@ default_vpc_rtid = "rtb-0b759e2fd83da83c7"
 domain_name      = "cskvsmi.online"
 domain_id        = "Z00449452CLOQK09IBZHP"
 
-kms_arn = "arn:aws:kms:us-east-1:697630586505:key/9eac9193-6406-4e7b-8580-faac987c8d62"
+kms_arn = "arn:aws:kms:us-east-1:193400300103:key/4577942f-9fbc-4247-84f6-e31cdf26ac63"
 vpc = {
   main = {
     cidr_block = "10.0.0.0/16"
