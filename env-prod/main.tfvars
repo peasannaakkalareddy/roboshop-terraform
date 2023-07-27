@@ -1,7 +1,7 @@
 env = "prod"
 bastion_cidr = ["172.31.88.210/32"]
 monitor_cidr     = ["172.31.94.42/32"]
-default_vpc_id = "	vpc-0031a3556931f8c23"
+default_vpc_id = "vpc-0031a3556931f8c23"
 default_vpc_cidr = "172.31.0.0/16"
 default_vpc_rtid = "rtb-0b759e2fd83da83c7"
 domain_name      = "panda4u.online"
